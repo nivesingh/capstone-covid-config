@@ -1,0 +1,24 @@
+{
+    "executionRoleArn": "arn:aws:iam::810119154557:role/ecsTaskExecutionRole",
+    "containerDefinitions": [
+        {
+            "name": "Sukanya",
+            "image": "<IMAGE_NAME>",
+            "essential": true,
+            "portMappings": [
+                {
+                    "hostPort": 80,
+                    "protocol": "tcp",
+                    "containerPort": 80
+                }
+            ]
+        }
+    ],
+    "requiresCompatibilities": [
+        "FARGATE"
+    ],
+    "networkMode": "awsvpc",
+    "cpu": "256",
+    "memory": "512",
+    "family": "Sukanya"
+}
